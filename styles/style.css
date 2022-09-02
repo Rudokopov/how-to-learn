@@ -40,7 +40,7 @@ ul {
   position: absolute;
   left: 64px;
   top: 30px;
-  background-image: url(/images/logo_place_header.svg);
+  background-image: url(./images/logo_place_header.svg);
 }
 
 .header__title{
@@ -183,7 +183,7 @@ ul {
   flex-direction: column;
   align-items: center;
   height: 890px;
-  background-image: url(/images/feynman.png);
+  background-image: url(./images/feynman.png);
   background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -281,7 +281,7 @@ ul {
 }
 
 .logo_place_footer {
-  background-image: url(/images/logo_place_footer.svg);
+  background-image: url(./images/logo_place_footer.svg);
 }
 
 .footer__author {
