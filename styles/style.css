@@ -1,11 +1,3 @@
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -38,6 +30,7 @@ ul {
 
 .logo_place_header {
   position: absolute;
+  z-index: 2;
   left: 64px;
   top: 30px;
   background-image: url(../images/logo_place_header.svg);
@@ -45,8 +38,9 @@ ul {
 
 .header__title{
   display: flex;
+  z-index: 2;
   align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
@@ -55,7 +49,9 @@ ul {
 }
 
 .header__subtitle {
+  margin: 0;
   position: absolute;
+  z-index: 2;
   left: 64px;
   bottom: 30px;
   width: 388px;
@@ -64,8 +60,10 @@ ul {
   font-weight: normal;
 }
 
-.header__subtitle-link {
+.header__link {
+  text-decoration: none;
   color: #2f80ed;
+  z-index: 2;
 }
 
 .header__main-illustration {
@@ -75,12 +73,14 @@ ul {
   right: 0;
   width: 765px;
   height: 608px;
+  object-fit: cover;
 
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
+  z-index: 0;
   top: 64px;
   right: 0;
   height: 568px;
@@ -90,7 +90,7 @@ ul {
 }
 
 
-/* Секция description */
+/* Секция main */
 
 .two-columns {
   display: flex;
@@ -99,6 +99,7 @@ ul {
 }
 
 .two-columns__brief-title {
+  margin: 0;
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
@@ -112,6 +113,7 @@ ul {
 }
 
 .two-columns__paragraph {
+  margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -129,37 +131,46 @@ ul {
 
 /* Секция digits */
 
+.digits {
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
 .section-title {
+  margin: 0;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-  margin-bottom: 0;
 }
 
 .section-subtitle {
+  margin: 0;
+  margin-top: 20px;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-top: 20px;
 }
 
 .table {
+  margin: 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
-  width: 1100px;
+  gap: 60px;
+  min-width: 1100px;
+  list-style: none;
+  margin-top: 60px;
 }
 
 .table__cell {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   width: 250px;
   min-height: 100px;
-  margin: 60px auto 60px auto;
-}
-
-.table__cell:not(:last-child) {
-  padding-bottom: 20px;
 }
 
 .table__heading {
@@ -170,9 +181,14 @@ ul {
 }
 
 .table__text {
+  margin: 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+}
+
+.table__text:not(:last-child) {
+  padding-bottom: 20px;
 }
 
 /* Секция Feynman */
@@ -182,7 +198,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 890px;
+  min-height: 890px;
   background-image: url(../images/feynman.png);
   background-color: #f2f2f2;
   background-repeat: no-repeat;
@@ -190,15 +206,18 @@ ul {
 }
 
 .feynman__title {
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 70px;
   width: 648px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  margin-bottom: 0;
 }
 
 .feynman__subtitle {
+  margin: 0;
   text-align: center;
   line-height: 51px;
   font-size: 36px;
@@ -207,6 +226,7 @@ ul {
 
 .feynman__link {
   position: absolute;
+  text-decoration: none;
   right: 48px;
   top: 50%;
   /* right: 48px; */
@@ -218,30 +238,47 @@ ul {
 
 /* Cекция kaufman */
 
-/* и элемента с модификатором вида ключ-значение */
+/* В брифе сказано разместить треугольник на 210 градусов за правую границу и позиционировать абсолютно */
+/* Я не знаю как позиционировать бэкграунд абсолютно и вообще возможно ли это */
+/* Поскольку отрицательная величина смещает его вправо background-position: -210; уводит треугольник влево */
+/* Я применил другие свойства, что бы, сделать расположение треугольника похожим на то, что изображено в макете */
+/* Спасибо за емкие комментарии к проекту, исправляя их я чувствую как развиваюсь :) */
 .kaufman {
   box-sizing: border-box;
-  position: relative;
   background-color: #1f1f1f;
   padding-top: 90px;
   padding-bottom: 90px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 877px 877px;
+  background-position: 700px -10px;
   overflow: hidden;
 }
 
 .section-title_theme_dark {
+  margin: 0 auto 20px ;
+  width: 60%;
   color: white;
 }
 
 .section-subtitle_theme_dark {
+  margin: 0 auto;
+  width: 60%;
   color: white;
 }
 
+.table_theme_dark {
+  margin: 0;
+  gap: 80px;
+  margin-top: 80px;
+}
+
 .table__cell_theme_dark {
+  margin: 0;
   z-index: 1;
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-top: 80px;
   /* border: 1px solid red; */
 }
 
@@ -256,9 +293,9 @@ ul {
 /* Footer */
 
 .footer {
+  margin: 0;
   display: flex;
   justify-content: center;
-  flex-basis: 711px;
   box-sizing: border-box;
   min-height: 350px;
   padding-top: 60px;
@@ -268,16 +305,18 @@ ul {
 }
 
 .footer__columns {
+  margin: 0;
   display: flex;
   justify-content: space-between;
   /* border: 1px solid red; */
   width: 90%;
 }
 
-.footer__column-content-copyright {
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-basis: 711px;
 }
 
 .logo_place_footer {
@@ -285,15 +324,21 @@ ul {
 }
 
 .footer__author {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
 }
 
+.footer__column-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 .footer__column-heading {
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
@@ -301,6 +346,8 @@ ul {
 }
 
 .footer__column-link {
+  margin: 0;
+  text-decoration: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
