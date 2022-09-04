@@ -91,11 +91,10 @@
 /* Секция discraption */
 
 .two-columns {
-  margin: 0;
+  margin: 0 100px 100px 100px;
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 0 100px 100px 100px;
 }
 
 .two-columns__brief-title {
@@ -162,19 +161,17 @@
 }
 
 .table {
-  margin: 0;
+  margin: auto;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   width: 1100px;
 }
 
 .table__cell {
-  margin: 0;
-  padding: 0;
   margin: 60px auto 0 auto;
+  padding: 0;
   width: 250px;
   min-height: 100px;
 }
@@ -329,6 +326,7 @@
 .footer__column-links {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .footer__column-heading {
@@ -337,11 +335,6 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
-}
-
-.footer__column-links {
-  padding-inline-start: 0;
-  list-style: none;
 }
 
 .footer__column-link {
