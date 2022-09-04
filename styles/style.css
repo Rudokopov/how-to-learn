@@ -14,7 +14,6 @@
   height: 32px;
 }
 
-
 /* Шапка */
 
 .header {
@@ -89,12 +88,13 @@
   background-color: #2f80ed;
 }
 
-
-/* Секция main */
+/* Секция discraption */
 
 .two-columns {
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  width: 80%;
   margin: 0 100px 100px 100px;
 }
 
@@ -131,6 +131,13 @@
 
 /* Секция digits */
 
+/* К сожалению вынуждены вам сообщить, что реализовать отступы через "Gap" в таблице, нашему Орку, не удалось*/
+/* Каждая попытка загуглить, что это за свойство, приводила его не на ту тропинку */
+/* Клятый Хром всякий раз дополнял слово "Gap" буквой "е" и из конктексного меню приводил на изученные до дыр сайты  */
+/* __Клятва__ */
+/* Торжественно клянусь, как только девушка приедет от родителей, я почищу историю и установлю безопасный поиск! */
+/* Ну а пока, больше Margin'a, меньше табака */
+
 .digits {
   margin: 0;
   box-sizing: border-box;
@@ -156,19 +163,18 @@
 
 .table {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  min-width: 1100px;
+  padding: 0;
   list-style: none;
-  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 1100px;
 }
 
 .table__cell {
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  margin: 60px auto 0 auto;
   width: 250px;
   min-height: 100px;
 }
@@ -238,20 +244,12 @@
 
 /* Cекция kaufman */
 
-/* В брифе сказано разместить треугольник на 210 градусов за правую границу и позиционировать абсолютно */
-/* Я не знаю как позиционировать бэкграунд абсолютно и вообще возможно ли это */
-/* Поскольку отрицательная величина смещает его вправо background-position: -210; уводит треугольник влево */
-/* Я применил другие свойства, что бы, сделать расположение треугольника похожим на то, что изображено в макете */
-/* Спасибо за емкие комментарии к проекту, исправляя их я чувствую как развиваюсь :) */
 .kaufman {
+  position: relative;
   box-sizing: border-box;
   background-color: #1f1f1f;
   padding-top: 90px;
   padding-bottom: 90px;
-  background-image: url(../images/kaufman-triangle.svg);
-  background-repeat: no-repeat;
-  background-size: 877px 877px;
-  background-position: 700px -10px;
   overflow: hidden;
 }
 
@@ -269,22 +267,20 @@
 
 .table_theme_dark {
   margin: 0;
-  gap: 80px;
-  margin-top: 80px;
+  margin: 0 auto 90px auto;
 }
 
 .table__cell_theme_dark {
-  margin: 0;
+  margin-top: 80px;
   z-index: 1;
   width: 200px;
   color: white;
-  margin-right: 0;
-  /* border: 1px solid red; */
 }
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: -210px;
   width: 877px;
   height: 877px;
@@ -308,7 +304,6 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
   width: 90%;
 }
 
@@ -325,6 +320,7 @@
 
 .footer__author {
   margin: 0;
+  margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -333,9 +329,7 @@
 .footer__column-links {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
-
 
 .footer__column-heading {
   margin: 0;
@@ -343,6 +337,11 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.footer__column-links {
+  padding-inline-start: 0;
+  list-style: none;
 }
 
 .footer__column-link {
