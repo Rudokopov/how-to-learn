@@ -76,7 +76,6 @@
 
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   z-index: 0;
@@ -130,13 +129,6 @@
 
 /* Секция digits */
 
-/* К сожалению вынуждены вам сообщить, что реализовать отступы через "Gap" в таблице, нашему Орку, не удалось*/
-/* Каждая попытка загуглить, что это за свойство, приводила его не на ту тропинку */
-/* Клятый Хром всякий раз дополнял слово "Gap" буквой "е" и из конктексного меню приводил на изученные до дыр сайты  */
-/* __Клятва__ */
-/* Торжественно клянусь, как только девушка приедет от родителей, я почищу историю и установлю безопасный поиск! */
-/* Ну а пока, больше Margin'a, меньше табака */
-
 .digits {
   margin: 0;
   box-sizing: border-box;
@@ -161,8 +153,10 @@
 }
 
 .table {
-  margin: auto;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -170,8 +164,10 @@
 }
 
 .table__cell {
-  margin: 60px auto 0 auto;
   padding: 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
   width: 250px;
   min-height: 100px;
 }
