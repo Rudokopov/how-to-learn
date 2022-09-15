@@ -1,0 +1,13 @@
+.video__iframes {
+  transform: translate(0, 50px);
+  display: flex;
+  justify-content: center;
+}
+
+/* .video__iframes {
+  position: absolute;
+  top: 45%;
+  left: 13%;
+  display: flex;
+  border: 1px solid red;
+} */
